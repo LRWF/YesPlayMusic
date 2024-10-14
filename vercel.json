@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:match*",
+      "destination": "https://wyy.api.music.fzlec.ltd/:match*"
+    }
+  ]
+}
