@@ -42,7 +42,11 @@
               :exclude="$parent.albumObject.artist.name"
               prefix="-"
           /></span>
-          <span v-if="isAlbum && (track.mark & 1048576) === 1048576" class="explicit-symbol"
+          <span
+            v-if="isAlbum && (track.mark & 1048576) === 1048576"
+            class="explicit-symbol"
+            ><ExplicitSymbol
+          /></span>
             ><ExplicitSymbol
           /></span>
         </div>
