@@ -43,9 +43,10 @@ service.interceptors.request.use(function (config) {
     localStorage.getItem('settings')
   ).enableRealIP;
   const realIP = JSON.parse(localStorage.getItem('settings')).realIP;
-  
   if (process.env.VUE_APP_REAL_IP) {
     config.params.realIP = process.env.VUE_APP_REAL_IP;
+  } else if (enableRealIP) {
+    config.params.realIP = realIP;
   }
 
   const proxy = JSON.parse(localStorage.getItem('settings')).proxyConfig;
