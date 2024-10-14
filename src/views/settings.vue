@@ -641,7 +641,6 @@
           <button @click="sendProxyConfig">更新代理</button>
         </div>
       </div>
-
       <div v-if="isElectron">
         <h3>Real IP</h3>
         <div class="item">
@@ -1152,7 +1151,6 @@ export default {
         });
       },
     },
-
     enableRealIP: {
       get() {
         return this.settings.enableRealIP || false;
@@ -1175,7 +1173,6 @@ export default {
         });
       },
     },
-
     proxyPort: {
       get() {
         return this.settings.proxyConfig?.port || '';
