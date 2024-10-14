@@ -47,8 +47,6 @@
             class="explicit-symbol"
             ><ExplicitSymbol
           /></span>
-            ><ExplicitSymbol
-          /></span>
         </div>
         <div v-if="!isAlbum" class="artist">
           <span
