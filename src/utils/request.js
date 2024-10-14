@@ -38,6 +38,12 @@ service.interceptors.request.use(function (config) {
     config.params.realIP = '211.161.244.70';
   }
 
+  // Force real_ip
+  const enableRealIP = JSON.parse(
+    localStorage.getItem('settings')
+  ).enableRealIP;
+  const realIP = JSON.parse(localStorage.getItem('settings')).realIP;
+  
   if (process.env.VUE_APP_REAL_IP) {
     config.params.realIP = process.env.VUE_APP_REAL_IP;
   }
